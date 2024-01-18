@@ -21,14 +21,13 @@ public class MongoManager {
     private MongoCollection<Document> serverCollection, friendCollection, friendRequestCollection;
 
     public MongoManager(Network network) {
-        var propertyManager = network.getPropertyManager();
 
-        client = new MongoClient(propertyManager.getDbProperty("ip"),  Integer.parseInt(propertyManager.getDbProperty("port")));
-        MongoDatabase _database = client.getDatabase(propertyManager.getDbProperty("db_name"));
+        client = new MongoClient();
+        MongoDatabase _database = client.getDatabase("db_name");
 
-        serverCollection = _database.getCollection(propertyManager.getDbProperty("servers"));
-        friendCollection = _database.getCollection(propertyManager.getDbProperty("friends"));
-        friendRequestCollection = _database.getCollection(propertyManager.getDbProperty("friendrequests"));
+        serverCollection = _database.getCollection("servers");
+        friendCollection = _database.getCollection("friends");
+        friendRequestCollection = _database.getCollection("friendrequests");
 
         datastore = Morphia.createDatastore(MongoClients.create(""), "");
         datastore.getMapper().mapPackage("com.mongodb.morphia.entities");

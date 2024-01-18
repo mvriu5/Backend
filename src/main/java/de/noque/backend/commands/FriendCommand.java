@@ -1,6 +1,7 @@
 package de.noque.backend.commands;
 
 import de.noque.backend.Network;
+import de.noque.backend.model.PlayerObject;
 import de.noque.backend.service.FriendRequestService;
 import de.noque.backend.service.FriendService;
 import de.noque.backend.service.PlayerService;
@@ -108,17 +109,17 @@ public class FriendCommand implements CommandExecutor {
     }
 
     private boolean list(String[] args, Player player) {
-        List<UUID> friends = _friendService.getFriends(player);
+        List<PlayerObject> friends = _friendService.getFriends(player);
 
         player.sendMessage(Component.text( "Your Friends", NamedTextColor.GOLD));
 
-        for (UUID uuid : friends) {
-            Player friend = (Player) Bukkit.getOfflinePlayer(uuid);
+        for (PlayerObject friend : friends) {
+            Player friendPlayer = (Player) Bukkit.getOfflinePlayer(friend.getUuid());
 
-            if (friend.isOnline())
-                player.sendMessage(Component.text(friend.displayName() + " (Online)", NamedTextColor.GREEN));
+            if (friendPlayer.isOnline())
+                player.sendMessage(Component.text(friendPlayer.displayName() + " (Online)", NamedTextColor.GREEN));
             else
-                player.sendMessage(Component.text(friend.displayName() + " (Offline)", NamedTextColor.GREEN));
+                player.sendMessage(Component.text(friendPlayer.displayName() + " (Offline)", NamedTextColor.GREEN));
         }
         return true;
     }

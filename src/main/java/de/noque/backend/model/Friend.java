@@ -10,15 +10,15 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity("friends") @Data
-public class FriendDocument {
+public class Friend {
 
     private @Id ObjectId Id;
     private UUID Uuid;
-    private @Reference List<UUID> Friends;
+    private @Reference List<PlayerObject> Friends;
 
-    public FriendDocument() {}
+    public Friend() {}
 
-    public FriendDocument(UUID uuid) {
+    public Friend(UUID uuid) {
         Uuid = uuid;
     }
 }

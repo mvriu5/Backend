@@ -11,16 +11,16 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity("friendrequests") @Data
-public class FriendRequestDocument {
+public class FriendRequest {
 
     private @Id ObjectId Id;
     private UUID Sender;
     private UUID Target;
     private Date TimeSent;
 
-    public FriendRequestDocument() {}
+    public FriendRequest() {}
 
-    public FriendRequestDocument(UUID sender, UUID target) {
+    public FriendRequest(UUID sender, UUID target) {
         Sender = sender;
         Target = target;
         TimeSent = Date.from(Instant.from(LocalDate.now()));

@@ -7,16 +7,16 @@ import lombok.Data;
 import org.bson.types.ObjectId;
 
 @Entity("server") @Data
-public class ServerDocument {
+public class ServerObject {
 
     private @Id ObjectId Id;
     private String Name;
     private State State;
     private String GameMode;
 
-    public ServerDocument() {}
+    public ServerObject() {}
 
-    public ServerDocument(String name, State state, String gameMode) {
+    public ServerObject(String name, State state, String gameMode) {
         Name = name;
         State = state;
         GameMode = gameMode;

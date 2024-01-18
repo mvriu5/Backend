@@ -2,7 +2,7 @@ package de.noque.backend.service;
 
 import com.mongodb.client.model.Filters;
 import de.noque.backend.Network;
-import de.noque.backend.model.FriendRequestDocument;
+import de.noque.backend.model.FriendRequest;
 import dev.morphia.Datastore;
 import dev.morphia.query.experimental.filters.Filter;
 
@@ -18,12 +18,12 @@ public class FriendRequestService {
     }
 
     public void add(UUID sender, UUID target) {
-        var document = new FriendRequestDocument(sender, target);
+        var document = new FriendRequest(sender, target);
         _datastore.save(document);
     }
 
     public void remove(UUID sender, UUID target) {
-        var document = _datastore.find(FriendRequestDocument.class)
+        var document = _datastore.find(FriendRequest.class)
                 .filter((Filter) Filters.eq("sender", sender))
                 .filter((Filter) Filters.eq("target", target)).first();
 
@@ -35,8 +35,8 @@ public class FriendRequestService {
         return false;
     }
 
-    public List<FriendRequestDocument> getRequests(UUID target) {
-        return _datastore.find(FriendRequestDocument.class)
+    public List<FriendRequest> getRequests(UUID target) {
+        return _datastore.find(FriendRequest.class)
                 .filter((Filter) Filters.eq("target", target)).iterator().toList();
     }
 }
