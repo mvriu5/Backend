@@ -4,28 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c913c369-a212-4660-892c-edf8b6ccdab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/de.noque.backend.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/BanCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/menu/BanMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="c913c369-a212-4660-892c-edf8b6ccdab1" name="Changes" comment="ban system angelegt">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Backend.backend.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/PlayerBan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/enums/BanReason.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/BanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/utils/BukkitPlayerInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/MongoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/MongoManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/FriendCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/FriendCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/ServerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/ServerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/FriendDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/FriendRequestDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/FriendRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/PlayerDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/PlayerObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/ServerDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/ServerObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/Network.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/BanCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/BanCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/menu/BanMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/menu/BanMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/FriendRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/FriendRequestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/FriendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/FriendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/ServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/ServerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +65,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -91,7 +86,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/mariu/OneDrive/Desktop/Network-Backend/Backend",
+    "last_opened_file_path": "C:/Users/mariu/OneDrive/Desktop/LobbySystem",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,6 +98,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="de.noque.backend.utils" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Backend [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -144,10 +144,22 @@
       <workItem from="1705514569308" duration="150000" />
       <workItem from="1705514743983" duration="157000" />
     </task>
+    <task id="LOCAL-00001" summary="ban system angelegt">
+      <created>1705579782523</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705579782523</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ban system angelegt" />
+    <option name="LAST_COMMIT_MESSAGE" value="ban system angelegt" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
