@@ -5,6 +5,7 @@ import de.noque.backend.commands.ServerCommand;
 import de.noque.backend.events.LoginListener;
 import de.noque.backend.service.*;
 import lombok.Getter;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Network extends JavaPlugin {
@@ -33,12 +34,13 @@ public final class Network extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
 
     private void registerCommands() {
         getCommand("friend").setExecutor(new FriendCommand(this));
         getCommand("server").setExecutor(new ServerCommand(this));
+        getCommand("server").setExecutor(new ServerCommand(this));
+
     }
 
     private void registerEvents() {

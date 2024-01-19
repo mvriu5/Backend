@@ -41,8 +41,11 @@ public class FriendRequestService {
         return true;
     }
 
-    public List<FriendRequest> getRequests(UUID target) {
-        return _datastore.find(FriendRequest.class)
-                .filter((Filter) Filters.eq("target", target)).iterator().toList();
+    public boolean getRequest(UUID player, UUID target) {
+        _datastore.find(FriendRequest.class)
+                .filter((Filter) Filters.eq("player", player))
+                .filter((Filter) Filters.eq("target", target));
+
+        return true;
     }
 }

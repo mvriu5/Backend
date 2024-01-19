@@ -2,3 +2,7 @@ name: Network-Backend
 version: '${version}'
 main: de.noque.backend.Network
 api-version: '1.20'
+commands:
+  ban:
+  friend:
+  server:

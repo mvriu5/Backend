@@ -50,6 +50,13 @@ public class FriendService {
                 .update(UpdateOperators.pullAll("friends", List.of(player)));
     }
 
+    public boolean getFriend(UUID player, UUID target) {
+        var query = _datastore.find(Friend.class)
+                .filter((Filter) Filters.eq("uuid", player));
+
+        return true;
+    }
+
     public List<PlayerObject> getFriends(Player player) {
         var document = _datastore.find(Friend.class)
                 .filter((Filter) Filters.eq("uuid", player.getUniqueId())).first();

@@ -35,7 +35,7 @@ public class BanMenu extends BukkitPlayerInventory {
     }
 
     private void buildInventory() {
-        var head = new ItemBuilder(Material.PAPER).setName("").toItemStack();
+        var head = new ItemBuilder(Material.PAPER).setName("").toItemStack(); //add skull
         var reasonHacks = new ItemBuilder(Material.PAPER).setName("").toItemStack();
         var reasonChat = new ItemBuilder(Material.PAPER).setName("").toItemStack();
         var timeThreeDays = new ItemBuilder(Material.PAPER).setName("").toItemStack();

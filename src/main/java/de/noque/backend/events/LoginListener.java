@@ -28,8 +28,8 @@ public class LoginListener implements Listener {
 
         PlayerBan ban = _banService.get(player.getUniqueId());
         if (ban != null) {
-            event.disallow(PlayerLoginEvent.Result.KICK_BANNED, Component.text(
-                    ban.getReason().toString() + " " + ban.getBannedUntil()));
+            event.disallow(PlayerLoginEvent.Result.KICK_BANNED,
+                    Component.text(ban.getReason().toString() + " " + ban.getBannedUntil()));
         }
 
         _playerService.add(player);

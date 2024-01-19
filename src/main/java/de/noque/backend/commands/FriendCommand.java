@@ -59,39 +59,43 @@ public class FriendCommand implements CommandExecutor {
     private boolean add(String[] args, Player player) {
         Player target = getPlayer(player, args[1]);
 
-        //checken ob bereits in friendlist
+        if (_friendService.getFriend(player.getUniqueId(), target.getUniqueId())) {
+            player.sendMessage(MiniMessage.miniMessage().deserialize("<red>You already have this player in your friend list."));
+            return false;
+        }
 
-        player.sendMessage("");
-        target.sendMessage("");
+        player.sendMessage(MiniMessage.miniMessage().deserialize("<green>You've sent " + target.getName() + " a friend request."));
+        target.sendMessage(MiniMessage.miniMessage().deserialize("<green>You've got a friend request from " + player.getName()));
         _friendRequestService.add(player.getUniqueId(), target.getUniqueId());
-
         return true;
     }
 
     private boolean remove(String[] args, Player player) {
         Player target = getPlayer(player, args[1]);
 
-        //check if player is in friendlist
+        if (!_friendService.getFriend(player.getUniqueId(), target.getUniqueId())) {
+            player.sendMessage(MiniMessage.miniMessage().deserialize("<red>You are not friends with this player."));
+            return false;
+        }
 
-        player.sendMessage("");
+        player.sendMessage(MiniMessage.miniMessage().deserialize("<green>You removed " + target.getName() + " from you friend list."));
         _friendService.removeFriend(player.getUniqueId(), target.getUniqueId());
-
-        return false;
+        return true;
     }
 
     private boolean accept(String[] args, Player player) {
         Player target = getPlayer(player, args[1]);
 
-        if (!_friendRequestService.checkRequest(target.getUniqueId(), player.getUniqueId())) {
-            player.sendMessage("");
+        if (!_friendRequestService.getRequest(player.getUniqueId(), target.getUniqueId())) {
+            player.sendMessage(MiniMessage.miniMessage().deserialize("<red>You got no friend request from that player"));
             return false;
         }
 
         _friendService.addFriend(player.getUniqueId(), target.getUniqueId());
         _friendRequestService.remove(target.getUniqueId(), player.getUniqueId());
 
-        player.sendMessage("");
-        target.sendMessage("");
+        player.sendMessage(MiniMessage.miniMessage().deserialize("<green>You are now friends with " + target.getName()));
+        target.sendMessage(MiniMessage.miniMessage().deserialize("<green>You are now friends with " + player.getName()));
 
         return true;
     }
@@ -99,13 +103,13 @@ public class FriendCommand implements CommandExecutor {
     private boolean deny(String[] args, Player player) {
         Player target = getPlayer(player, args[1]);
 
-        if (!_friendRequestService.checkRequest(target.getUniqueId(), player.getUniqueId())) {
-            player.sendMessage("");
+        if (!_friendRequestService.getRequest(player.getUniqueId(), target.getUniqueId())) {
+            player.sendMessage(MiniMessage.miniMessage().deserialize("<red>You got no friend request from that player"));
             return false;
         }
 
         _friendRequestService.remove(target.getUniqueId(), player.getUniqueId());
-        player.sendMessage("");
+        player.sendMessage(MiniMessage.miniMessage().deserialize("<green>You've denied the friend request of " + target.getName()));
         return true;
     }
 
@@ -129,7 +133,7 @@ public class FriendCommand implements CommandExecutor {
         UUID targetUUID = _playerService.getUUID(name);
 
         if (targetUUID == null)
-            sender.sendMessage("");
+            sender.sendMessage(MiniMessage.miniMessage().deserialize("<red>This player never joined the server."));
 
         return Bukkit.getPlayer(targetUUID);
     }

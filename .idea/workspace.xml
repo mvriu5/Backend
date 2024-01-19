@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c913c369-a212-4660-892c-edf8b6ccdab1" name="Changes" comment="ban system weiter">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/utils/ItemBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/Network.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/FriendCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/commands/FriendCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/events/LoginListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/events/LoginListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/menu/BanMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/menu/BanMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/enums/BanReason.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/model/enums/BanReason.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/FriendRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/FriendRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/FriendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/noque/backend/service/FriendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/paper-plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/paper-plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,23 +32,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="backend" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="backend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="backend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -63,6 +49,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
   <component name="ProjectId" id="2b5gwx900Ec5uJO11iVWpKbHeLS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -159,6 +146,17 @@
     <MESSAGE value="ban system angelegt" />
     <MESSAGE value="ban system weiter" />
     <option name="LAST_COMMIT_MESSAGE" value="ban system weiter" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/noque/backend/commands/FriendCommand.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
