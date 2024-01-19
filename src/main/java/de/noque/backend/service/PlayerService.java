@@ -2,7 +2,7 @@ package de.noque.backend.service;
 
 import com.mongodb.client.model.Filters;
 import de.noque.backend.Network;
-import de.noque.backend.model.PlayerDocument;
+import de.noque.backend.model.PlayerObject;
 import dev.morphia.Datastore;
 import dev.morphia.query.experimental.filters.Filter;
 import org.bukkit.entity.Player;
@@ -18,29 +18,34 @@ public class PlayerService {
     }
 
     public void add(Player player) {
-        var query = _datastore.find(PlayerDocument.class)
+        var query = _datastore.find(PlayerObject.class)
                 .filter((Filter) Filters.eq("uuid", player.getUniqueId()));
 
         if (query == null) {
-            var document = new PlayerDocument(player.getUniqueId());
+            var document = new PlayerObject(player.getUniqueId(), player.getName());
             _datastore.save(document);
         }
     }
 
     public void remove(Player player) {
-        var document = _datastore.find(PlayerDocument.class)
+        var document = _datastore.find(PlayerObject.class)
                 .filter((Filter) Filters.eq("uuid", player.getUniqueId()));
 
         if (document != null) _datastore.delete(document.delete());
     }
 
-    public PlayerDocument get(UUID uuid) {
-        return _datastore.find(PlayerDocument.class)
+    public PlayerObject get(UUID uuid) {
+        return _datastore.find(PlayerObject.class)
                 .filter((Filter) Filters.eq("uuid", uuid)).first();
     }
 
+    public PlayerObject get(String name) {
+        return _datastore.find(PlayerObject.class)
+                .filter((Filter) Filters.eq("name", name)).first();
+    }
+
     public UUID getUUID(String name) {
-        return _datastore.find(PlayerDocument.class)
+        return _datastore.find(PlayerObject.class)
                 .filter((Filter) Filters.eq("name", name)).first().getUuid();
     }
 }

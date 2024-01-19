@@ -11,16 +11,16 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity("players") @Data
-public class PlayerDocument {
+public class PlayerObject {
 
     private @Id ObjectId Id;
     private UUID Uuid;
     private String Name;
     private Date FirstJoin;
 
-    public PlayerDocument() {}
+    public PlayerObject() {}
 
-    public PlayerDocument(UUID uuid, String name) {
+    public PlayerObject(UUID uuid, String name) {
         Uuid = uuid;
         Name = name;
         FirstJoin = Date.from(Instant.from(LocalDate.now()));
