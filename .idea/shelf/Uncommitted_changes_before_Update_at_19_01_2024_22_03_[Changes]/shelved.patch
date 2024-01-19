@@ -1,0 +1,181 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c913c369-a212-4660-892c-edf8b6ccdab1\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/dependencies-accessors.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/dependencies-accessors.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/file-system.probe\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.gitignore\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/gradle.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/gradle.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules/backend.main.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/modules/backend.main.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2b5gwx900Ec5uJO11iVWpKbHeLS\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Marius/Desktop/Network-Backend&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"c913c369-a212-4660-892c-edf8b6ccdab1\" name=\"Changes\" comment=\"\" />\r\n      <created>1705510596505</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1705510596505</updated>\r\n      <workItem from=\"1705510597643\" duration=\"470000\" />\r\n      <workItem from=\"1705514569308\" duration=\"150000\" />\r\n      <workItem from=\"1705514743983\" duration=\"157000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent\">\r\n    <option name=\"sizePresets\">\r\n      <list>\r\n        <SizePreset>\r\n          <option name=\"caption\" value=\"Phone\" />\r\n          <option name=\"height\" value=\"568\" />\r\n          <option name=\"width\" value=\"320\" />\r\n        </SizePreset>\r\n        <SizePreset>\r\n          <option name=\"caption\" value=\"Tablet\" />\r\n          <option name=\"height\" value=\"1024\" />\r\n          <option name=\"width\" value=\"768\" />\r\n        </SizePreset>\r\n        <SizePreset>\r\n          <option name=\"caption\" value=\"Desktop\" />\r\n          <option name=\"height\" value=\"900\" />\r\n          <option name=\"width\" value=\"1440\" />\r\n        </SizePreset>\r\n      </list>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 45c2d55f9dccdadadd8c63ecfe9ffa06571a3cd5)
++++ b/.idea/workspace.xml	(date 1705698179437)
+@@ -5,25 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="c913c369-a212-4660-892c-edf8b6ccdab1" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules/backend.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/backend.main.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -34,6 +16,18 @@
+     <projectState path="$PROJECT_DIR$">
+       <ProjectState />
+     </projectState>
++  </component>
++  <component name="ExternalProjectsManager">
++    <system id="GRADLE">
++      <state>
++        <projects_view>
++          <tree_state>
++            <expand />
++            <select />
++          </tree_state>
++        </projects_view>
++      </state>
++    </system>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -43,24 +37,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Marius/Desktop/Network-Backend&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "master",
++    "last_opened_file_path": "C:/Users/Marius/Desktop/Projects/Network-Backend",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "project.structure.last.edited": "SDKs",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -71,12 +65,43 @@
+       <updated>1705510596505</updated>
+       <workItem from="1705510597643" duration="470000" />
+       <workItem from="1705514569308" duration="150000" />
+-      <workItem from="1705514743983" duration="157000" />
++      <workItem from="1705514743983" duration="440000" />
++      <workItem from="1705698134463" duration="46000" />
+     </task>
++    <task id="LOCAL-00001" summary="Initial">
++      <created>1705514924884</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1705514924884</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Initial">
++      <created>1705514947704</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1705514947704</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Initial" />
++    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+   </component>
+   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
+     <option name="sizePresets">
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Gradle Imported\" enabled=\"true\">\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <processorPath useClasspath=\"false\">\r\n          <entry name=\"$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar\" />\r\n        </processorPath>\r\n        <module name=\"backend.main\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n    <bytecodeTargetLevel target=\"17\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 45c2d55f9dccdadadd8c63ecfe9ffa06571a3cd5)
++++ b/.idea/compiler.xml	(date 1705698201992)
+@@ -7,7 +7,7 @@
+         <processorPath useClasspath="false">
+           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
+         </processorPath>
+-        <module name="backend.main" />
++        <module name="de.noque.backend.main" />
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel target="17" />
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/modules/backend.main.iml\" filepath=\"$PROJECT_DIR$/.idea/modules/backend.main.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision 45c2d55f9dccdadadd8c63ecfe9ffa06571a3cd5)
++++ b/.idea/modules.xml	(date 1705698201974)
+@@ -3,6 +3,7 @@
+   <component name="ProjectModuleManager">
+     <modules>
+       <module fileurl="file://$PROJECT_DIR$/.idea/modules/backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/backend.main.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/de.noque.backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/de.noque.backend.main.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
