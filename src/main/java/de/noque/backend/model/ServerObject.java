@@ -6,10 +6,9 @@ import dev.morphia.annotations.Id;
 import lombok.Data;
 import org.bson.types.ObjectId;
 
-@Entity("server") @Data
+@Data
 public class ServerObject {
 
-    private @Id ObjectId Id;
     private String Name;
     private State State;
     private String GameMode;

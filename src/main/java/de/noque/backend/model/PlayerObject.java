@@ -1,22 +1,20 @@
 package de.noque.backend.model;
 
-import dev.morphia.annotations.Entity;
-import dev.morphia.annotations.Id;
 import lombok.Data;
-import org.bson.types.ObjectId;
 
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
-@Entity("players") @Data
+@Data
 public class PlayerObject {
 
-    private @Id ObjectId Id;
     private UUID Uuid;
     private String Name;
     private Date FirstJoin;
+    private List<UUID> Friends;
 
     public PlayerObject() {}
 

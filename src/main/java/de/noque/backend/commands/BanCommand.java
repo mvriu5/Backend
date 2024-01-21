@@ -11,6 +11,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.sql.SQLException;
+import java.util.UUID;
+
 public class BanCommand implements CommandExecutor {
 
     private final Network _network;
@@ -29,19 +32,18 @@ public class BanCommand implements CommandExecutor {
         if (!player.isOp()) return false;
         if (args.length < 1) return false;
 
-        PlayerObject banPlayer = _playerService.get(args[0]);
+        try {
+            UUID uuid = _playerService.getUUID(args[0]);
 
-        if (banPlayer == null) {
-            player.sendMessage("");
-            return false;
+            if (uuid == null) {
+                player.sendMessage("");
+                return false;
+            }
+
+            new BanMenu(_network, uuid).open(player);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-
-        if (_banService.get(banPlayer.getUuid()) != null) {
-            player.sendMessage("");
-            return false;
-        }
-
-        new BanMenu(_network, banPlayer).open(player);
 
         return false;
     }

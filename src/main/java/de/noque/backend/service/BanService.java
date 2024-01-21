@@ -1,47 +1,71 @@
 package de.noque.backend.service;
 
-import com.mongodb.client.model.Filters;
 import de.noque.backend.Network;
 import de.noque.backend.model.PlayerBan;
-import de.noque.backend.model.PlayerObject;
+import de.noque.backend.model.ServerObject;
 import de.noque.backend.model.enums.BanReason;
-import dev.morphia.Datastore;
-import dev.morphia.query.experimental.filters.Filter;
+import de.noque.backend.model.enums.State;
 
+import java.sql.*;
 import java.time.Duration;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
 import java.util.UUID;
 
 public class BanService {
 
-    private final Datastore _datastore;
+    private final Connection _connection;
+
+    private final String TABLE = "bans";
+    private final String COLUMN_UUID = "uuid";
+    private final String COLUMN_REASON = "reason";
+    private final String COLUMN_TIMEBANNED = "time_banned";
+    private final String COLUMN_BANNEDUNTIL = "banned_until";
+
 
     public BanService(Network network) {
-        _datastore = network.getMongoManager().getDatastore();
+        _connection = network.getConnection();
     }
 
-    public boolean add(UUID uuid, BanReason reason, Duration duration) {
-        var query = _datastore.find(PlayerObject.class)
-                .filter((Filter) Filters.eq("uuid", uuid));
+    public boolean add(UUID uuid, BanReason reason, Duration duration) throws SQLException {
+        if (get(uuid) != null) return false;
 
-        if (query != null) return false;
+        PreparedStatement ps = _connection.prepareStatement("INSERT INTO %s (%s, %s, %s) VALUES (?, ?, ?)"
+                .formatted(TABLE, COLUMN_UUID, COLUMN_REASON, COLUMN_TIMEBANNED));
+        ps.setString(1, uuid.toString());
+        ps.setString(2, reason.name());
+        ps.setString(3, duration.toString());
 
-        var document = new PlayerBan(uuid, reason, duration);
-        _datastore.save(document);
+        ps.execute();
+        ps.close();
         return true;
     }
 
-    public boolean remove(UUID uuid) {
-        var document = _datastore.find(PlayerBan.class)
-                .filter((Filter) Filters.eq("uuid", uuid)).first();
+    public boolean remove(UUID uuid) throws SQLException {
+        if (get(uuid) != null) return false;
 
-        if (document == null) return false;
+        PreparedStatement ps = _connection.prepareStatement("DELETE FROM %s WHERE %s = ?"
+                .formatted(TABLE, COLUMN_UUID));
+        ps.setString(1, uuid.toString());
 
-        _datastore.delete(document);
+        ps.execute();
+        ps.close();
         return true;
     }
 
-    public PlayerBan get(UUID uuid) {
-        return _datastore.find(PlayerBan.class)
-                .filter((Filter) Filters.eq("uuid", uuid)).first();
+    public PlayerBan get(UUID uuid) throws SQLException {
+        PreparedStatement ps = _connection.prepareStatement("SELECT * FROM %s WHERE %s = ?"
+                .formatted(TABLE, COLUMN_UUID));
+        ps.setString(1, uuid.toString());
+        ResultSet rs = ps.executeQuery();
+
+        if (rs.first()) {
+            var ban = new PlayerBan();
+            ban.setUuid(UUID.fromString(rs.getString(COLUMN_UUID)));
+            ban.setReason(BanReason.valueOf(rs.getString(COLUMN_REASON)));
+            ban.setBanDuration(Duration.parse(rs.getString(COLUMN_TIMEBANNED)));
+            return ban;
+        }
+        return null;
     }
 }

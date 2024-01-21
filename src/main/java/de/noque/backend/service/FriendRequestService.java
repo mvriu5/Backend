@@ -1,51 +1,57 @@
 package de.noque.backend.service;
 
-import com.mongodb.client.model.Filters;
 import de.noque.backend.Network;
-import de.noque.backend.model.FriendRequest;
-import de.noque.backend.model.PlayerObject;
-import dev.morphia.Datastore;
-import dev.morphia.query.experimental.filters.Filter;
 
-import java.util.List;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.UUID;
 
 public class FriendRequestService {
 
-    private final Datastore _datastore;
+    private final Connection _connection;
+
+    private final String TABLE = "friendrequest";
+    private final String COLUMN_SENDER = "sender";
+    private final String COLUMN_TARGET = "target";
+    private final String COLUMN_TIMESENT = "time_sent";
 
     public FriendRequestService(Network network) {
-        _datastore = network.getMongoManager().getDatastore();
+        _connection = network.getConnection();
     }
 
-    public boolean add(UUID sender, UUID target) {
-        var query = _datastore.find(PlayerObject.class)
-                .filter((Filter) Filters.eq("uuid", sender))
-                .filter((Filter) Filters.eq("uuid", target)).first();
+    public void add(UUID sender, UUID target) throws SQLException {
+        if (!getRequest(sender, target)) return;
 
-        if (query != null) return false;
+        PreparedStatement ps = _connection.prepareStatement("INSERT INTO %s (%s, %s, %s) VALUES (?, ?, ?)"
+                .formatted(TABLE, COLUMN_SENDER, COLUMN_TARGET, COLUMN_TIMESENT));
+        ps.setString(1, sender.toString());
+        ps.setString(2, target.toString());
+        ps.setDate(1, Date.valueOf(LocalDate.now()));
 
-        var document = new FriendRequest(sender, target);
-        _datastore.save(document);
-        return true;
+        ps.executeUpdate();
+        ps.close();
     }
 
-    public boolean remove(UUID sender, UUID target) {
-        var document = _datastore.find(FriendRequest.class)
-                .filter((Filter) Filters.eq("sender", sender))
-                .filter((Filter) Filters.eq("target", target)).first();
+    public void remove(UUID sender, UUID target) throws SQLException {
+        if (!getRequest(sender, target)) return;
 
-        if (document == null) return false;
+        PreparedStatement ps = _connection.prepareStatement("INSERT INTO %s (%s, %s, %s) VALUES (?, ?, ?)"
+                .formatted(TABLE, COLUMN_SENDER, COLUMN_TARGET, COLUMN_TIMESENT));
+        ps.setString(1, sender.toString());
+        ps.setString(2, target.toString());
+        ps.setDate(1, Date.valueOf(LocalDate.now()));
 
-        _datastore.delete(document);
-        return true;
+        ps.executeUpdate();
+        ps.close();
     }
 
-    public boolean getRequest(UUID player, UUID target) {
-        _datastore.find(FriendRequest.class)
-                .filter((Filter) Filters.eq("player", player))
-                .filter((Filter) Filters.eq("target", target));
+    public boolean getRequest(UUID sender, UUID target) throws SQLException {
+        PreparedStatement ps = _connection.prepareStatement("SELECT * FROM %s WHERE %s = ? AND %s = ?"
+                .formatted(TABLE, COLUMN_SENDER, COLUMN_TARGET));
+        ps.setString(1, sender.toString());
+        ps.setString(2, target.toString());
+        ResultSet rs = ps.executeQuery();
 
-        return true;
+        return rs.first();
     }
 }

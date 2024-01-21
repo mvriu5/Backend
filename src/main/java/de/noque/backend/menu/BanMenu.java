@@ -13,20 +13,22 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
 import javax.naming.InvalidNameException;
+import java.sql.SQLException;
 import java.time.Duration;
+import java.util.UUID;
 
 public class BanMenu extends BukkitPlayerInventory {
 
     private final BanService _banService;
-    private final PlayerObject _banPlayer;
+    private final UUID _banUUID;
 
     private BanReason _banReason;
     private Duration _banDuration;
 
-    public BanMenu(Network network, PlayerObject banPlayer) {
+    public BanMenu(Network network, UUID banUUID) {
         super(Component.text("BanMenu", NamedTextColor.GREEN), 3);
         _banService = network.getBanService();
-        _banPlayer = banPlayer;
+        _banUUID = banUUID;
     }
 
     public void open(Player player) {
@@ -64,8 +66,8 @@ public class BanMenu extends BukkitPlayerInventory {
         _banDuration = duration;
     }
 
-    private void onFinishClick(InventoryClickEvent event) {
-        _banService.add(_banPlayer.getUuid(), _banReason, _banDuration);
+    private void onFinishClick(InventoryClickEvent event) throws SQLException {
+        _banService.add(_banUUID, _banReason, _banDuration);
     }
 
 }

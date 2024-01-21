@@ -5,26 +5,32 @@ import de.noque.backend.commands.ServerCommand;
 import de.noque.backend.events.LoginListener;
 import de.noque.backend.service.*;
 import lombok.Getter;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
+@Getter
 public final class Network extends JavaPlugin {
 
-    private @Getter MongoManager mongoManager;
+    private Connection connection;
 
-    private @Getter PlayerService playerService;
-    private @Getter BanService banService;
-    private @Getter FriendService friendService;
-    private @Getter FriendRequestService friendRequestService;
-    private @Getter ServerService serverService;
+    private PlayerService playerService;
+    private BanService banService;
+    private FriendRequestService friendRequestService;
+    private ServerService serverService;
 
     @Override
     public void onEnable() {
-        mongoManager = new MongoManager(this);
+
+        try {
+            connection = new DbConnectionFactory(this).connect();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         playerService = new PlayerService(this);
         banService = new BanService(this);
-        friendService = new FriendService(this);
         friendRequestService = new FriendRequestService(this);
         serverService = new ServerService(this);
 
