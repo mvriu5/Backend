@@ -12,6 +12,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class ServerCommand implements CommandExecutor {
@@ -30,19 +31,18 @@ public class ServerCommand implements CommandExecutor {
 
         String subCommand = args[0];
 
-        if (subCommand.equalsIgnoreCase("add"))
-            return add(args, player);
-
-        if (subCommand.equalsIgnoreCase("remove"))
-            return remove(args, player);
-
-        if (subCommand.equalsIgnoreCase("list"))
-            return getList(player);
+        try {
+            if (subCommand.equalsIgnoreCase("add")) return add(args, player);
+            if (subCommand.equalsIgnoreCase("remove")) return remove(args, player);
+            if (subCommand.equalsIgnoreCase("list")) return getList(player);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         return false;
     }
 
-    private boolean add(String[] args, Player player) {
+    private boolean add(String[] args, Player player) throws SQLException {
         if (args[1] == null) {
             player.sendMessage("");
             return false;
@@ -62,7 +62,7 @@ public class ServerCommand implements CommandExecutor {
         return false;
     }
 
-    private boolean remove(String[] args, Player player) {
+    private boolean remove(String[] args, Player player) throws SQLException {
         if (args[1] == null) {
             player.sendMessage("");
             return false;
@@ -82,8 +82,8 @@ public class ServerCommand implements CommandExecutor {
         return false;
     }
 
-    private boolean getList(Player player) {
-        List<ServerObject> servers = _serverService.loadAll();
+    private boolean getList(Player player) throws SQLException {
+        List<ServerObject> servers = _serverService.getAll();
 
         servers.forEach((server) ->
             player.sendMessage(Component.text(
